@@ -19,12 +19,11 @@ function draw() {
     strokeWeight(1);
     circle(canvasSize / 2, canvasSize / 2, canvasSize - ballSize);
 
-
     drawCircle(a);
     line(0, canvasSize / 2, canvasSize, canvasSize / 2);
     line(canvasSize / 2, 0, canvasSize / 2, canvasSize);
 
-    a += 30;
+    a += 22.5;
 }
 
 function drawCircle(angle) {
