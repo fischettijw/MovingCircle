@@ -3,13 +3,14 @@ let ballSize = 30;
 let diam = (canvasSize - ballSize) / 2;
 let cX = (canvasSize / 2);
 let cY = (canvasSize / 2) + diam / 2;
-let clrs = ['green', 'red', 'magenta', 'brown', ' orange', 'yellow', 'cyan', 'blue'];
+let clrs = ['red', 'orange', 'lightgreen', 'green', ' cyan', 'purple', 'black', 'magenta'];
 let a = 0;
+let iStart = 0;
 
 function setup() {
     createCanvas(canvasSize, canvasSize);
     angleMode(DEGREES);
-    frameRate(2);
+    frameRate(1);
 }
 
 function draw() {
@@ -23,7 +24,8 @@ function draw() {
     line(0, canvasSize / 2, canvasSize, canvasSize / 2);
     line(canvasSize / 2, 0, canvasSize / 2, canvasSize);
 
-    a += 22.5;
+
+    a += 360 / clrs.length;
 }
 
 function drawCircle(angle) {
@@ -32,14 +34,15 @@ function drawCircle(angle) {
     translate(width / 2, height / 2);
     rotate(angle);
 
+    translate(0, diam / 2);
     fill(220);
     stroke('black');
     strokeWeight(1);
-    translate(0, diam / 2);
     circle(0, 0, diam);
-
-    for (i = 0; i < clrs.length; i++) {
-        fill(clrs[i]);
+    iStart = frameCount;
+    for (i = iStart; i < iStart + clrs.length; i++) {
+        let ii = i % clrs.length;
+        fill(clrs[ii]);
         noStroke();
         circle(0, diam / 2, ballSize);
         rotate(360 / clrs.length);
