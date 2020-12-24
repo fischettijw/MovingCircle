@@ -47,7 +47,8 @@ function drawRotatingCircle(angle) {
     stroke('white');
     strokeWeight(1);
     circle(0, 0, rotCircleDiam);
-    for (i = frameCount; i < frameCount + clrs.length; i++) {
+    let fc = frameCount;
+    for (i = fc; i < fc + clrs.length; i++) {
         let ii = (i - 1) % clrs.length;
         fill(clrs[ii]);
         noStroke();
