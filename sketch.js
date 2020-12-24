@@ -31,7 +31,6 @@ function draw() {
 
     drawRotatingCircle(a);
     a += 360 / clrs.length / 2;
-    // a += 360 / clrs.length / 2;
 }
 
 function drawRotatingCircle(angle) {
