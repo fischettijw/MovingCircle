@@ -20,23 +20,14 @@ function draw() {
     strokeWeight(1);
     circle(canvasSize / 2, canvasSize / 2, canvasSize - ballSize);
 
-
-    stroke(clrs[4]);
-    line(0, canvasSize / 2, canvasSize, canvasSize / 2);
-    stroke(clrs[0]);
-    line(canvasSize / 2, 0, canvasSize / 2, canvasSize);
-
-    // for (c = 0; c < clrs.length; c++) {
-    //     push();
-    //     translate(width / 2, height / 2);
-    //     rotate((360 / clrs.length) * c);
-    //     stroke(clrs[c]);
-    //     line(0, canvasSize / 2, canvasSize, canvasSize / 2);
-
-    //     pop();
-    // }
-
-
+    for (c = 0; c < clrs.length; c++) {
+        push();
+        translate(width / 2, height / 2);
+        rotate((360 / clrs.length / 2) * c);
+        stroke(clrs[c]);
+        line(0, -canvasSize / 2, 0, canvasSize / 2);
+        pop();
+    }
 
     drawRotatingCircle(a);
     a += 360 / clrs.length / 2;
