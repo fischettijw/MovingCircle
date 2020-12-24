@@ -1,7 +1,7 @@
 let canvasSize = 480;
 let ballSize = 30;
 let rotCircleDiam = (canvasSize - ballSize) / 2;
-let clrs = ['red', 'orange', 'lightgreen', 'green', ' cyan', 'purple', 'black', 'magenta'];
+let clrs = ['red', 'orange', 'yellow', 'green', ' cyan', 'purple', 'black', 'magenta'];
 let incAngle = 0;
 
 function setup() {
