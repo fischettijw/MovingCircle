@@ -16,32 +16,46 @@ function setup() {
 function draw() {
     background(220);
     fill(220);
-    stroke('black');
+    stroke('white');
     strokeWeight(1);
     circle(canvasSize / 2, canvasSize / 2, canvasSize - ballSize);
 
-    drawCircle(a);
+
+    stroke(clrs[4]);
     line(0, canvasSize / 2, canvasSize, canvasSize / 2);
+    stroke(clrs[0]);
     line(canvasSize / 2, 0, canvasSize / 2, canvasSize);
 
+    // for (c = 0; c < clrs.length; c++) {
+    //     push();
+    //     translate(width / 2, height / 2);
+    //     rotate((360 / clrs.length) * c);
+    //     stroke(clrs[c]);
+    //     line(0, canvasSize / 2, canvasSize, canvasSize / 2);
 
-    a += 360 / clrs.length;
+    //     pop();
+    // }
+
+
+
+    drawRotatingCircle(a);
+    a += 360 / clrs.length / 2;
 }
 
-function drawCircle(angle) {
+function drawRotatingCircle(angle) {
     push();
 
     translate(width / 2, height / 2);
     rotate(angle);
 
     translate(0, diam / 2);
-    fill(220);
+    fill(220, 0);
     stroke('black');
     strokeWeight(1);
     circle(0, 0, diam);
     iStart = frameCount;
     for (i = iStart; i < iStart + clrs.length; i++) {
-        let ii = i % clrs.length;
+        let ii = (i - 1) % clrs.length;
         fill(clrs[ii]);
         noStroke();
         circle(0, diam / 2, ballSize);
