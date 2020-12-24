@@ -2,7 +2,7 @@ let canvasSize = 480;
 let clrs = ['red', 'orange', 'yellow', 'chartreuse', 'green', 'springgreen',
     'cyan', 'magenta', 'blue', 'hotpink', 'darkgray', 'coral'
 ];
-let ballSize = 360 / clrs.length;
+let ballSize = (3.14159 * (canvasSize)) / (4 * clrs.length);
 let rotCircleDiam = (canvasSize - ballSize) / 2;
 let incAngle = 0;
 
