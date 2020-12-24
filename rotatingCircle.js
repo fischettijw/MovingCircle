@@ -33,6 +33,7 @@ function drawRadialLines() {
         translate(width / 2, height / 2);
         rotate((360 / clrs.length / 2) * c);
         stroke(clrs[c]);
+        strokeWeight(3);
         line(0, -canvasSize / 2, 0, canvasSize / 2);
         pop();
     }
