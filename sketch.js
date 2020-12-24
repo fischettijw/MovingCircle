@@ -10,7 +10,7 @@ let iStart = 0;
 function setup() {
     createCanvas(canvasSize, canvasSize);
     angleMode(DEGREES);
-    frameRate(1);
+    frameRate(4);
 }
 
 function draw() {
@@ -31,6 +31,7 @@ function draw() {
 
     drawRotatingCircle(a);
     a += 360 / clrs.length / 2;
+    // a += 360 / clrs.length / 2;
 }
 
 function drawRotatingCircle(angle) {
@@ -41,7 +42,7 @@ function drawRotatingCircle(angle) {
 
     translate(0, diam / 2);
     fill(220, 0);
-    stroke('black');
+    stroke('white');
     strokeWeight(1);
     circle(0, 0, diam);
     iStart = frameCount;
