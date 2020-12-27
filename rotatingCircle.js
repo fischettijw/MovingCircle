@@ -1,6 +1,7 @@
 let canvasSize = 480;
 let clrs = ['red', 'orange', 'yellow', 'chartreuse', 'green', 'springgreen',
-    'cyan', 'magenta', 'blue', 'hotpink', 'darkgray', 'coral'
+    'cyan', 'magenta', 'blue', 'hotpink', 'darkgray', 'coral',
+    'DarkSlateGray', 'Beige', 'NavajoWhite', 'DeepSkyBlue', 'LightCyan', 'LightSeaGreen'
 ];
 let ballSize = (3.14159 * (canvasSize)) / (4 * clrs.length);
 let rotCircleDiam = (canvasSize - ballSize) / 2;
@@ -9,7 +10,7 @@ let incAngle = 0;
 function setup() {
     createCanvas(canvasSize, canvasSize).position(10, 10);
     angleMode(DEGREES);
-    frameRate(2);
+    frameRate(4);
 }
 
 function draw() {
