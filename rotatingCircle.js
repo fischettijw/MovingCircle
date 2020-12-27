@@ -1,4 +1,4 @@
-let canvasSize = 480;
+let canvasSize = 900;
 let clrs = ['red', 'orange', 'yellow', 'chartreuse', 'green', 'springgreen',
     'cyan', 'magenta', 'blue', 'hotpink', 'darkgray', 'coral',
     'DarkSlateGray', 'Beige', 'NavajoWhite', 'DeepSkyBlue', 'LightCyan', 'LightSeaGreen'
